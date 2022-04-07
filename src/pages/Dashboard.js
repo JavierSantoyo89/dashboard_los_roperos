@@ -1,9 +1,23 @@
 import React from 'react';
+import {Grid} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core/styles'
+import Navbar from '../components/Navbar';
+
+const useStyles = makeStyles(()=>({
+    root:{
+        flexGrow: 1
+    }
+}))
 
 function Dashboard(props){
+    const classes = useStyles
     return(
-        <div>
-            Soy el dashboard
+        <div className={classes.root}>
+            <Grid container spacing={3}>
+                <Grid item xs={12}>
+                    <Navbar />
+                </Grid>
+            </Grid>
         </div>
     )
 }
