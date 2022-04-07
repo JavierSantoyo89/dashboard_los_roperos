@@ -20,7 +20,7 @@ const useStyles = makeStyles(()=>({
 
 
 function Navbar(props){
-    const classes = useStyles
+    const classes = useStyles()
     return (
         <div className={classes.root}>
             <AppBar position='static'>

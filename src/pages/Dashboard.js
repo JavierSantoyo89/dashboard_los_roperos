@@ -10,7 +10,7 @@ const useStyles = makeStyles(()=>({
 }))
 
 function Dashboard(props){
-    const classes = useStyles
+    const classes = useStyles()
     return(
         <div className={classes.root}>
             <Grid container spacing={3}>
