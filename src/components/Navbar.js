@@ -2,7 +2,7 @@ import React from 'react'
 import {makeStyles} from '@material-ui/core/styles'
 import {AppBar, Toolbar, IconButton, Typography} from '@material-ui/core'
 import HouseIcon from '@material-ui/icons/House';
-
+import {Button} from '@material-ui/core/'
 const useStyles = makeStyles(()=>({
     root:{
         flexGrow: 1
@@ -26,7 +26,7 @@ function Navbar(props){
             <AppBar position='static'>
                 <Toolbar>
                     <IconButton edge = 'start' className={classes.menuButton} color='inherit'>
-                        <HouseIcon />
+                        <Button href="http://localhost:1689/" ><HouseIcon/>  </Button>
                     </IconButton>
                     <Typography variant='h6' className={classes.title}>
                         Los roperos
