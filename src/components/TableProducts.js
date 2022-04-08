@@ -61,7 +61,6 @@ const [products, setProducts] = useState([])
                         <StyledTableCell>ID</StyledTableCell>
                         <StyledTableCell>Nombre</StyledTableCell>
                         <StyledTableCell>Precio</StyledTableCell>
-                        <StyledTableCell>Accion</StyledTableCell>
 
                     </TableRow>
                 </TableHead>
@@ -69,16 +68,16 @@ const [products, setProducts] = useState([])
                 <TableBody>
                     {products.map(product=>(
                         <TableRow key = {product.id}>
-                            <TableCell>
+                            <TableCell align='center'>
                                 <img src={'http://localhost:1689/images/products/' + product.imgProduct} alt ='avatar' width='65px' height='85px'/>    
                             </TableCell>
-                            <TableCell> 
+                            <TableCell align='center'> 
                                 {product.id}
                             </TableCell>
-                            <TableCell> 
+                            <TableCell align='center'> 
                                 {product.name}
                             </TableCell>
-                            <TableCell> 
+                            <TableCell align='center'> 
                                 {product.price}
                             </TableCell>
                         </TableRow>
