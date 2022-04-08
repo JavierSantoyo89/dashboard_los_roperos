@@ -1,9 +1,7 @@
 import React from 'react'
 import {makeStyles} from '@material-ui/core/styles'
 import {AppBar, Toolbar, IconButton, Typography} from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
-
-
+import HouseIcon from '@material-ui/icons/House';
 
 const useStyles = makeStyles(()=>({
     root:{
@@ -28,7 +26,7 @@ function Navbar(props){
             <AppBar position='static'>
                 <Toolbar>
                     <IconButton edge = 'start' className={classes.menuButton} color='inherit'>
-                        <MenuIcon />
+                        <HouseIcon />
                     </IconButton>
                     <Typography variant='h6' className={classes.title}>
                         Los roperos
