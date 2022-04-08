@@ -5,10 +5,13 @@ import Navbar from '../components/Navbar';
 import 'fontsource-roboto'
 import '../assets/css/dashboard.css'
 import CardsHeaderCountProducts from '../components/CardsHeaderCountProducts'
-import HouseIcon from '@material-ui/icons/House';
 import CardsHeaderCountUsers from '../components/CardsHeaderCountUsers';
 import CardsHeaderCountSaleSeason from '../components/CardsHeaderCountSaleSeason'
 import TableProducts from '../components/TableProducts'
+
+import CheckroomIcon from '@material-ui/icons/CheckBox'
+import AccountCircleIcon from '@material-ui/icons/AccountCircleOutlined'
+import FormatStrikethroughIcon from  '@material-ui/icons/FormatStrikethrough'
 const useStyles = makeStyles(()=>({
     root:{
         flexGrow: 1
@@ -32,13 +35,13 @@ function Dashboard(props){
                 </Grid>
             
                     <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
-                        <CardsHeaderCountUsers icono={<HouseIcon className={classes.iconos}/>} titulo='Usuarios' texto='total de Usuarios' color='rgba(148,80,50,1)' font= 'white'/>  
+                        <CardsHeaderCountUsers icono={<AccountCircleIcon className={classes.iconos}/>} titulo='Usuarios' texto='total de Usuarios' color='rgba(148,80,50,1)' font= 'white'/>  
                     </Grid>
                     <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
-                    <CardsHeaderCountProducts icono={<HouseIcon className={classes.iconos}/>} titulo='Productos' texto='total de productos' color='rgba(48,80,150,1)' font= 'white'/>
+                    <CardsHeaderCountProducts icono={<CheckroomIcon className={classes.iconos}/>} titulo='Productos' texto='total de productos' color='rgba(48,80,150,1)' font= 'white'/>
                     </Grid>
                     <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
-                    <CardsHeaderCountSaleSeason icono={<HouseIcon className={classes.iconos}/>} titulo='In-sale/Season' texto='In-sale' color='rgba(48,80,50,1)' font= 'white'/>
+                    <CardsHeaderCountSaleSeason icono={<FormatStrikethroughIcon className={classes.iconos}/>} titulo='In-sale/Season' texto='In-sale' color='rgba(48,80,50,1)' font= 'white'/>
                     </Grid>
 
             </Grid>

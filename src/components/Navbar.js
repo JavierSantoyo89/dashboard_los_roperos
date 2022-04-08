@@ -17,8 +17,6 @@ const useStyles = makeStyles(()=>({
         BorderRadius: '50%'
     }
 }))
-
-
 function Navbar(props){
     const classes = useStyles()
     return (

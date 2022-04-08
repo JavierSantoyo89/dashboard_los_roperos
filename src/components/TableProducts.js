@@ -2,7 +2,7 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from '@material-ui/core';
 import {withStyles} from '@material-ui/core/styles'
-
+import DeleteIcon from '@material-ui/icons/Delete'
 
 const StyledTableCell = withStyles(()=>({
     head:{
@@ -19,9 +19,8 @@ const StyledTableCell = withStyles(()=>({
 
 function TableProducts(){
 
-    
-
-// Seccion de todos los productos
+ 
+    // Seccion de todos los productos
 const [products, setProducts] = useState([])
 
     useEffect(()=>{
@@ -36,8 +35,6 @@ const [products, setProducts] = useState([])
             console.log("%c Se monto el componente", "color: green");
            // console.log(response.data);
            console.log(fetch);
-           
-    
     },[])
 
     useEffect(()=>{ 
@@ -61,7 +58,7 @@ const [products, setProducts] = useState([])
                         <StyledTableCell>ID</StyledTableCell>
                         <StyledTableCell>Nombre</StyledTableCell>
                         <StyledTableCell>Precio</StyledTableCell>
-
+                        <StyledTableCell>Accion</StyledTableCell>
                     </TableRow>
                 </TableHead>
 
@@ -80,10 +77,11 @@ const [products, setProducts] = useState([])
                             <TableCell align='center'> 
                                 {product.price}
                             </TableCell>
-                        </TableRow>
-                                
+                            <TableCell align='center'> 
+                                <DeleteIcon/>
+                            </TableCell>
+                        </TableRow>    
                     ))}
-
                 </TableBody>
             </Table>
         </TableContainer>
